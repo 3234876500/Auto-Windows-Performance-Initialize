@@ -75,7 +75,7 @@ Set-NetFirewallProfile -Enabled False
 Disable-MMAgent -PageCombining
 Disable-MMAgent -MemoryCompression
 Disable-MMAgent -ApplicationPreLaunch
-Set-MMAgent -MaxOperationAPIFiles 1024
+Set-MMAgent -MaxOperationAPIFiles 2048
 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 bcdedit /set useplatformtick no
 bcdedit /set useplatformclock no
@@ -137,4 +137,5 @@ Write-Host (Format-CenterText -Text $Script_Name) -ForegroundColor Red
 Write-Host (Format-CenterText -Text "Author:",$Script_Author) -ForegroundColor Green
 Write-Host (Format-CenterText -Text "Version:",$Script_Version) -ForegroundColor Blue
 Write-Host (Format-CenterText -Text "Time:",$End_Time)
+
 pause
