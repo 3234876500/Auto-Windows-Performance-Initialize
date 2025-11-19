@@ -18,6 +18,7 @@ function Format-CenterText {
     $rightDash = '-' * $rightPadding
     return "${leftDash}${Text}${rightDash}"
 }
+
 If (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Start-Process powershell "-File `"$PSCommandPath`"" -Verb runAs
     Exit
@@ -81,10 +82,7 @@ bcdedit /set useplatformtick no
 bcdedit /set useplatformclock no
 bcdedit /set disabledynamictick yes
 bcdedit /set hypervusirlauchtype off
-netsh int tcp set global rss=enabled
-netsh int tcp set global dca=enabled
-netsh int tcp set global timestamps=enabled
-netsh int tcp set global autotuninglevel=experimental
+fsutil behavior set disablelastaccess 1
 
 # About WindowsService
 Write-Host (Format-CenterText -Text "Start Optimize Windows Services")
@@ -139,3 +137,4 @@ Write-Host (Format-CenterText -Text "Version:",$Script_Version) -ForegroundColor
 Write-Host (Format-CenterText -Text "Time:",$End_Time)
 
 pause
+
