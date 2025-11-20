@@ -121,10 +121,8 @@ foreach ($svc in $Services) {
 # About WindowsCapabilities
 Write-Host (Format-CenterText -Text "Start Optimize Windows Regedit")
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v PaintDesktopVersion /t REG_DWORD /d 1 /f
-
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SgrmBroker" /v Start /t REG_DWORD /d 3 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SgrmBroker" /v DelayedAutoStart /t REG_DWORD /d 3 /f
-
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl" /v Win32PrioritySeparation /t REG_DWORD /d 40 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem" /v NtfsDisableLastAccessUpdate /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v DisablePagingExecutive /t REG_DWORD /d 1 /f
@@ -135,4 +133,5 @@ Write-Host (Format-CenterText -Text $Script_Name) -ForegroundColor Red
 Write-Host (Format-CenterText -Text "Author:",$Script_Author) -ForegroundColor Green
 Write-Host (Format-CenterText -Text "Version:",$Script_Version) -ForegroundColor Blue
 Write-Host (Format-CenterText -Text "Time:",$End_Time)
+
 pause
