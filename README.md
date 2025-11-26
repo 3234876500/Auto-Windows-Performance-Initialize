@@ -1,6 +1,6 @@
 # [Auto Windows Performance Initialize](https://github.com/3234876500/Auto-Windows-Performance-Initialize.git)
 ---
-#### 在Microsoft Windows系统下右键选择“使用Powershell”运行，接下来您将会收到关于UAC权限确认。
+#### 在Microsoft Windows系统下选择“WindowsInitialize_v4.11.10”右键“使用Powershell”运行，接下来您将会收到关于UAC权限确认。
 #### <mark>Warning：该脚本文件运行后会修改设备功能及系统注册表项，存在一定风险，谨慎使用！</mark>
 #### <mark>如果您在使用过程中有疑问，可尝试运行 Restore WindowsInitialize 重置设定项！</mark>
 ---
