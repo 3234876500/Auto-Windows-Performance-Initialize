@@ -135,3 +135,4 @@ Write-Host (Format-CenterText -Text "Version:",$Script_Version) -ForegroundColor
 Write-Host (Format-CenterText -Text "Time:",$End_Time)
 
 pause
+
