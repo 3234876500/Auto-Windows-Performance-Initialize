@@ -42,6 +42,8 @@ bcdedit /deletevalue useplatformclock
 bcdedit /deletevalue useplatformtick
 bcdedit /deletevalue disabledynamictic
 netsh winsock reset
+netsh int ip reset
+netsh winsock reset
 
 # About WindowsService
 Write-Host (Format-CenterText -Text "Start Optimize Windows Services")
@@ -101,3 +103,4 @@ Write-Host (Format-CenterText -Text $Script_Name) -ForegroundColor Red
 Write-Host (Format-CenterText -Text "Author:",$Script_Author) -ForegroundColor Green
 
 pause
+
