@@ -1,7 +1,7 @@
 $Script_Name = "WindowsInitialize"
 $Script_Author = "Thalix"
 $Script_Version = "4.22.11"
-$Update_Time = "2026.3.04-23:31"
+$Update_Time = "2026.3.05-14:30"
 function Format-CenterText {
     param(
         [string]$Text
@@ -36,7 +36,7 @@ function Check {
         }
         else {
             Write-Host (Format-CenterText -Text "Operating strategy:[$currentPolicy], ") -ForegroundColor Red
-            exit
+            pause
         }
     }
 }
@@ -156,4 +156,5 @@ Write-Host (Format-CenterText -Text $Script_Name) -ForegroundColor Red
 Write-Host (Format-CenterText -Text "Author:", $Script_Author) -ForegroundColor Green
 Write-Host (Format-CenterText -Text "Version:", $Script_Version) -ForegroundColor Blue
 Write-Host (Format-CenterText -Text "Time:", $Update_Time)
+
 pause
